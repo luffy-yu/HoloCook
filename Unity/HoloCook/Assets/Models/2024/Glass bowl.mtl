@@ -1,0 +1,12 @@
+# Blender 3.3.0 MTL File: 'Glass bowl.blend'
+# www.blender.org
+
+newmtl Material_Glass
+Ns 1000.000000
+Ka 0.001591 0.001591 0.001591
+Kd 0.757985 0.757985 0.757985
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.517140
+d 0.781818
+illum 6
