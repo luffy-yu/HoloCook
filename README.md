@@ -51,6 +51,8 @@ but there are **four source files** that are different to resolve the compilatio
 
 > <sub>2</sub>Photon Voice for HoloLens 2 plugin is not free, so it's not included in the source code.
 
+> <sub>3</sub>You should change the `AppIdFusion` to yours even though it can work even without changing.
+
 <details>
   <summary>Four different files.</summary>
 
