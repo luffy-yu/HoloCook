@@ -1,0 +1,33 @@
+newmtl 01
+illum 7
+Kd 0.734064 0.728862 0.534186
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.5
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+
+newmtl 00
+illum 7
+Kd 1 0.993073 0.734064
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.5
+Ns 16
+Ks 1 1 1
+adobe_glow 0

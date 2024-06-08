@@ -1,0 +1,33 @@
+# Blender 3.3.0 MTL File: 'bottles.blend'
+# www.blender.org
+
+newmtl Atlas.004
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/LiuchuanYu/Downloads/20-liquor-bottles/Pernod_Diff.png
+map_Ks C:/Users/LiuchuanYu/Downloads/20-liquor-bottles/Pernod_Spec.png
+map_Ns C:/Users/LiuchuanYu/Downloads/20-liquor-bottles/Pernod_Metal.png
+map_d C:/Users/LiuchuanYu/Downloads/20-liquor-bottles/Pernod_Metal.png
+map_Bump -bm 1.000000 C:/Users/LiuchuanYu/Downloads/20-liquor-bottles/Pernod_Norm.png
+
+newmtl Texture.006
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/Projects/Code/public/HoloCook/Assets/Models/2024/Untitled Object 1/baked_mesh_tex0.png
+
+newmtl Texture.007
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/Projects/Code/public/HoloCook/Assets/Models/2024/Untitled Object 1/baked_mesh_tex0.png
