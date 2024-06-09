@@ -3,6 +3,7 @@
 <div align="center">
 <a href="https://www.chuange.org/papers/HoloCook.html"><img src="docs/home.png" style="width: 50px"/></a>&emsp;
 <a href="https://youtu.be/VawN5NliBAk"><img src="docs/video.png" style="width: 50px"/></a>&emsp;
+<a href="https://youtu.be/IQjKy95F7l0"><img src="docs/video.png" style="width: 50px"/></a>&emsp;
 <a href="#"><img src="docs/internet.png" style="width: 50px"/></a>&emsp;
 <a href="https://www.chuange.org/files/HoloCook.pdf"><img src="docs/pdf.png" style="width: 50px"/></a>&emsp;
 <a href="https://www.linkedin.com/in/liuchuan-yu-64a44621a"><img src="docs/linkedin.png" style="width: 50px"/></a>&emsp;
