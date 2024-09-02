@@ -22111,9 +22111,6 @@ MonoBehaviour:
   - id: 206
     gameObject: {fileID: 1060420704}
     enable: 1
-  - id: 206
-    gameObject: {fileID: 1060420704}
-    enable: 1
   - id: 301
     gameObject: {fileID: 2021594174}
     enable: 1
