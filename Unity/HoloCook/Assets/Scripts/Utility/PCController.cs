@@ -5,7 +5,7 @@
 
 using System;
 using System.Collections.Generic;
-#if !UNITY_WSA // not windows uwp
+#if !UNITY_ANDROID // not windows uwp
 using Fusion;
 #endif
 using HoloCook.HoloLens2;
@@ -816,7 +816,7 @@ namespace HoloCook.Utility
             // 4th column
             GUILayout.BeginVertical();
 
-#if !UNITY_WSA // not windows uwp, server is null in HL2 mode
+#if !UNITY_ANDROID // not android, server is null in HL2 mode
             GUILayout.Label("Animations", style);
 
             if (GUILayout.Button("Knife"))

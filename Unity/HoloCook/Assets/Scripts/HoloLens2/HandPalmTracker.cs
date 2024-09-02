@@ -7,9 +7,9 @@ using Byter;
 using HoloCook.Menu;
 using HoloCook.Network;
 using HoloCook.Utility;
-using Microsoft.MixedReality.Toolkit;
-using Microsoft.MixedReality.Toolkit.Input;
-using Microsoft.MixedReality.Toolkit.Utilities;
+// using Microsoft.MixedReality.Toolkit;
+// using Microsoft.MixedReality.Toolkit.Input;
+// using Microsoft.MixedReality.Toolkit.Utilities;
 using UnityEngine;
 using Stuff = HoloCook.Menu.Static.Stuff;
 
@@ -69,8 +69,8 @@ namespace HoloCook.HoloLens2
             plateTrigger.AnimationTriggered += OnAnimationTriggered;
             bigCupTrigger.AnimationTriggered += OnAnimationTriggered;
 
-            _rightHand = GetHandPalm(Handedness.Right);
-            _leftHand = GetHandPalm(Handedness.Left);
+            _rightHand = GetHandPalm(Handness.Right);
+            _leftHand = GetHandPalm(Handness.Left);
         }
 
         private void OnAnimationTriggered(string name, Handness handness)
@@ -88,16 +88,17 @@ namespace HoloCook.HoloLens2
             // SetGameObjectTransform(gameObject, t);
         }
 
+        // TODO: get hand palm
         // Get hand palm transform
-        Transform GetHandPalm(Handedness handedness)
+        Transform GetHandPalm(Handness handedness)
         {
             Transform jointTransform = null;
 
-            var handJointService = CoreServices.GetInputSystemDataProvider<IMixedRealityHandJointService>();
-            if (handJointService != null)
-            {
-                jointTransform = handJointService.RequestJointTransform(TrackedHandJoint.Palm, handedness);
-            }
+            // var handJointService = CoreServices.GetInputSystemDataProvider<IMixedRealityHandJointService>();
+            // if (handJointService != null)
+            // {
+            //     jointTransform = handJointService.RequestJointTransform(TrackedHandJoint.Palm, handedness);
+            // }
 
             return jointTransform;
         }

@@ -3,7 +3,7 @@
 // Licensed under the MIT License. See LICENSE file in the project root for full license information.
 //
 
-#if UNITY_WSA
+#if UNITY_ANDROID
 using UnityEngine;
 
 namespace HoloCook.Sync

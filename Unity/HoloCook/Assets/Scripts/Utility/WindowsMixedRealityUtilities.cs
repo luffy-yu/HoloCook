@@ -2,8 +2,8 @@
 // Licensed under the MIT License.
 
 using System;
-using Microsoft.MixedReality.Toolkit;
-using Microsoft.MixedReality.Toolkit.WindowsMixedReality;
+// using Microsoft.MixedReality.Toolkit;
+// using Microsoft.MixedReality.Toolkit.WindowsMixedReality;
 #if (UNITY_WSA && DOTNETWINRT_PRESENT) || WINDOWS_UWP
 using System.Runtime.InteropServices;
 #if WINDOWS_UWP
@@ -32,7 +32,7 @@ namespace HoloCook.Utility
         /// <para>This is intended to be used to support both XR SDK and Unity's legacy XR pipeline, which provide
         /// different APIs to access these native objects.</para>
         /// </remarks>
-        public static IWindowsMixedRealityUtilitiesProvider UtilitiesProvider { get; set; } = null;
+        // public static IWindowsMixedRealityUtilitiesProvider UtilitiesProvider { get; set; } = null;
 
 #if (UNITY_WSA && DOTNETWINRT_PRESENT) || WINDOWS_UWP
         private static SpatialInteractionManager spatialInteractionManager = null;
@@ -169,16 +169,16 @@ namespace HoloCook.Utility
         }
 #endif // WINDOWS_UWP
 
-        [Obsolete("Use the System.Numerics.Vector3 extension method ToUnityVector3 instead.")]
-        public static UnityEngine.Vector3 SystemVector3ToUnity(System.Numerics.Vector3 vector)
-        {
-            return vector.ToUnityVector3();
-        }
-
-        [Obsolete("Use the System.Numerics.Quaternion extension method ToUnityQuaternion instead.")]
-        public static UnityEngine.Quaternion SystemQuaternionToUnity(System.Numerics.Quaternion quaternion)
-        {
-            return quaternion.ToUnityQuaternion();
-        }
+        // [Obsolete("Use the System.Numerics.Vector3 extension method ToUnityVector3 instead.")]
+        // public static UnityEngine.Vector3 SystemVector3ToUnity(System.Numerics.Vector3 vector)
+        // {
+        //     return vector.ToUnityVector3();
+        // }
+        //
+        // [Obsolete("Use the System.Numerics.Quaternion extension method ToUnityQuaternion instead.")]
+        // public static UnityEngine.Quaternion SystemQuaternionToUnity(System.Numerics.Quaternion quaternion)
+        // {
+        //     return quaternion.ToUnityQuaternion();
+        // }
     }
 }

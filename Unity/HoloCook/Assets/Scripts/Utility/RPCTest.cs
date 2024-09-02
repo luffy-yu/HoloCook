@@ -3,7 +3,7 @@
 // Licensed under the MIT License. See LICENSE file in the project root for full license information.
 //
 
-#if UNITY_WSA // windows uwp
+#if UNITY_ANDROID // windows uwp
 using UnityEngine;
 
 namespace HoloCook.Utility

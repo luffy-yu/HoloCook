@@ -66,7 +66,7 @@ namespace HoloCook.Sync
         [HideInInspector]
         public bool enableMapping
         {
-#if UNITY_WSA // HoloLens build, fix compilation error
+#if UNITY_ANDROID // Quest build, fix compilation error
             get => true;
 #else
        get => spawner.enableMapping;

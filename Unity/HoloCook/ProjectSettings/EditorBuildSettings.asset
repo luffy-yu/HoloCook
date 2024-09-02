@@ -9,6 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/HoloLens2.unity
     guid: 340f4dda11fafc1449b8ed997900be36
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2086e57a41e095d4bab37e8964ae3cc7, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 74f7a458f4d306e49b17f5042bb132fd, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8c1b92a9340db7c4a9c8ade7c92471d2, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: c83242d43ff95b1428107236f4015557, type: 2}

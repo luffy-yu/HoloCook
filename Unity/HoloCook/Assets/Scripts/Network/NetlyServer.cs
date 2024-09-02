@@ -565,7 +565,7 @@ namespace HoloCook.Network
             print($"[NetlyServer] Client_MsgHL2Header: {name} {flag}");
             // process animation locally if needed
             // pCController.ActivateAnimation(name);
-#if !UNITY_WSA // not windows uwp
+#if !UNITY_ANDROID // not windows uwp
             rPCMessager.RPC_MsgHL2Header(data);
             print($"[NetlyServer] RPC_MsgHL2Header");
 #endif

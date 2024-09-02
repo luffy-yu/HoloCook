@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8566802672849893279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: Android Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: -8369219806707376186}
+  m_InitManagerOnStart: 1
+--- !u!114 &-8369219806707376186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: Android Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders:
+  - {fileID: 11400000, guid: e270a925a5617024284946db8a3dbcfa, type: 2}
 --- !u!114 &-3291044846008654143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,8 +60,7 @@ MonoBehaviour:
   m_RequiresSettingsUpdate: 0
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
-  m_Loaders:
-  - {fileID: 11400000, guid: 21798fdad0084874abfbabecab40b1e9, type: 2}
+  m_Loaders: []
 --- !u!114 &-944713509313796202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,10 +87,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dc886499c26824283350fa532d087d, type: 3}
   m_Name: XRGeneralSettings
   m_EditorClassIdentifier: 
-  Keys: 0e00000001000000
+  Keys: 0e0000000100000007000000
   Values:
   - {fileID: -3291044846008654143}
   - {fileID: -944713509313796202}
+  - {fileID: -8566802672849893279}
 --- !u!114 &6519035278064480715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,5 +108,4 @@ MonoBehaviour:
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
   m_Loaders:
-  - {fileID: 11400000, guid: 39e30d83f6bc7cb46a573d0ef4125ef2, type: 2}
-  - {fileID: 11400000, guid: 21798fdad0084874abfbabecab40b1e9, type: 2}
+  - {fileID: 11400000, guid: e270a925a5617024284946db8a3dbcfa, type: 2}
