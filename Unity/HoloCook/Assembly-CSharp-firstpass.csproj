@@ -700,9 +700,6 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
- <Reference Include="Unity.InputSystem">
- <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
@@ -721,9 +718,6 @@
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.Editor">
- <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.OculusQuestSupport.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.XR.Management.Editor">
  <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
  </Reference>
@@ -736,14 +730,8 @@
  <Reference Include="Unity.PlasticSCM.Editor">
  <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
- <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
  <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.OpenXR.Editor">
- <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.XR.OpenXR.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
@@ -751,20 +739,11 @@
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
  <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
- <Reference Include="Unity.XR.OpenXR">
- <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.XR.OpenXR.dll</HintPath>
- </Reference>
  <Reference Include="Unity.XR.Oculus">
  <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.XR.Oculus.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
  <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.OpenXR.Features.ConformanceAutomation">
- <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.ConformanceAutomation.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor">
- <HintPath>D:/Projects/Code/public/HoloCook/Unity/HoloCook/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
