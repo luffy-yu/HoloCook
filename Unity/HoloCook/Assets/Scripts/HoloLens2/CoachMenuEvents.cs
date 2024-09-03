@@ -64,10 +64,10 @@ namespace HoloCook.HoloLens2
 
         private bool tutoringStarted = false;
 
-        ObjectManipulator GetObjectManipulatorScript()
-        {
-            return panelQuad.GetComponent<ObjectManipulator>();
-        }
+        // ObjectManipulator GetObjectManipulatorScript()
+        // {
+        //     return panelQuad.GetComponent<ObjectManipulator>();
+        // }
 
         private void Start()
         {
@@ -202,8 +202,8 @@ namespace HoloCook.HoloLens2
 
         public void EnablePlaneInteraction()
         {
-            var om = GetObjectManipulatorScript();
-            om.enabled = true;
+            // var om = GetObjectManipulatorScript();
+            // om.enabled = true;
 
             _mainThreadWorkQueue.Enqueue(() =>
             {
@@ -223,8 +223,8 @@ namespace HoloCook.HoloLens2
 
         public void DisablePlaneInteraction()
         {
-            var om = GetObjectManipulatorScript();
-            om.enabled = false;
+            // var om = GetObjectManipulatorScript();
+            // om.enabled = false;
 
             _mainThreadWorkQueue.Enqueue(() => { planeRef.SetActive(false); });
         }
