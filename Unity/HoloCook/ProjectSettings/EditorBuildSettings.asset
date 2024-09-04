@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HoloLens2.unity
-    guid: 340f4dda11fafc1449b8ed997900be36
+    path: Assets/Scenes/QuestPro.unity
+    guid: 29621075c0698474e870aab0ae19464e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2086e57a41e095d4bab37e8964ae3cc7, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 74f7a458f4d306e49b17f5042bb132fd, type: 2}
