@@ -14689,6 +14689,8 @@ MonoBehaviour:
   pancakeRefRoot: {fileID: 2191061318315572743}
   cocktailRefRoot: {fileID: 4407132903443612832}
   bowlGrabbable: {fileID: 858062738}
+  leftPlaneGrabbale: {fileID: 841743664}
+  rightPlaneGrabbale: {fileID: 1598819302}
 --- !u!1 &741407531
 GameObject:
   m_ObjectHideFlags: 0
@@ -19611,6 +19613,8 @@ MonoBehaviour:
   available: 0
   recordingAction: 0
   recordedGameObject: {fileID: 0}
+  leftHandMeshNode: {fileID: 1761008437}
+  rightHandMeshNode: {fileID: 1924511339}
 --- !u!1 &1010104792
 GameObject:
   m_ObjectHideFlags: 0
@@ -31886,6 +31890,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760629409}
   m_Mesh: {fileID: 8630190525705643313, guid: 8c11847fc6c6fdf4f9b06b4a18fe41e0, type: 3}
+--- !u!4 &1761008437 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2168138016974986309, guid: f54012181eacade4ea242c65f804720f, type: 3}
+  m_PrefabInstance: {fileID: 840977740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1766409883
 GameObject:
   m_ObjectHideFlags: 0
@@ -34662,6 +34671,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922503003}
   m_Mesh: {fileID: 8630190525705643313, guid: 8c11847fc6c6fdf4f9b06b4a18fe41e0, type: 3}
+--- !u!4 &1924511339 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8907808974102868871, guid: f54012181eacade4ea242c65f804720f, type: 3}
+  m_PrefabInstance: {fileID: 840977740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1936876095
 GameObject:
   m_ObjectHideFlags: 0

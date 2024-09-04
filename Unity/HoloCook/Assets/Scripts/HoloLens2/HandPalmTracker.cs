@@ -6,6 +6,7 @@
 using Byter;
 using HoloCook.Menu;
 using HoloCook.Network;
+using HoloCook.Static;
 using HoloCook.Utility;
 // using Microsoft.MixedReality.Toolkit;
 // using Microsoft.MixedReality.Toolkit.Input;
@@ -23,7 +24,7 @@ namespace HoloCook.HoloLens2
         [HideInInspector]public GameObject gameObject;
 
         [HideInInspector] public CollisionDetector collisionDetector;
-
+        
         // rotation offset
         private float xOffset = 0;
         private float yOffset = -60;
@@ -59,6 +60,17 @@ namespace HoloCook.HoloLens2
         // minimum time span between attach and drop
         private float minimumTimeSpan = 3.0f;
 
+        #region Meta Quest Pro
+       
+        // adaption for Meta Quest Pro
+        [Header("Meta Quest Pro")] 
+        [Tooltip("OVRInteractionComprehensive - OVRHands - LeftHandGrabUseSynthetic - OVRLeftHandVisual - OculusHand_L - l_handMeshNode")]
+        public Transform leftHandMeshNode;
+        
+        [Tooltip("OVRInteractionComprehensive - OVRHands - RightHandGrabUseSynthetic - OVRRightHandVisual - OculusHand_R - r_handMeshNode")]
+        public Transform rightHandMeshNode;
+        
+        #endregion
 
         // Start is called before the first frame update
         void Start()
@@ -87,20 +99,23 @@ namespace HoloCook.HoloLens2
             // var t = GetHandPalm();
             // SetGameObjectTransform(gameObject, t);
         }
-
-        // TODO: get hand palm
+        
         // Get hand palm transform
         Transform GetHandPalm(Handness handedness)
         {
-            Transform jointTransform = null;
+            // Transform jointTransform = null;
 
             // var handJointService = CoreServices.GetInputSystemDataProvider<IMixedRealityHandJointService>();
             // if (handJointService != null)
             // {
             //     jointTransform = handJointService.RequestJointTransform(TrackedHandJoint.Palm, handedness);
             // }
-
-            return jointTransform;
+            // return jointTransform;
+            
+            // The hand is visible when its SkinnedMeshRenderer is enabled
+            var hand = handedness == Handness.Left ? leftHandMeshNode : rightHandMeshNode;
+            
+            return hand;
         }
 
         void SetGameObjectTransform(GameObject go, Transform t)

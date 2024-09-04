@@ -64,10 +64,21 @@ namespace HoloCook.HoloLens2
 
         private bool tutoringStarted = false;
 
-        // ObjectManipulator GetObjectManipulatorScript()
-        // {
-        //     return panelQuad.GetComponent<ObjectManipulator>();
-        // }
+        #region Meta Quest Pro
+
+        // adaption for Meta Quest Pro
+        [Header("Meta Quest Pro")] [Tooltip("HandGrabInteractable (Left)")]
+        public GameObject leftPlaneGrabbale;
+
+        [Tooltip("HandGrabInteractable (Right)")]
+        public GameObject rightPlaneGrabbale;
+
+        void SetPlaneInteractable(bool enabled)
+        {
+            leftPlaneGrabbale.SetActive(enabled);
+            rightPlaneGrabbale.SetActive(enabled);
+        }
+        #endregion
 
         private void Start()
         {
@@ -205,6 +216,8 @@ namespace HoloCook.HoloLens2
             // var om = GetObjectManipulatorScript();
             // om.enabled = true;
 
+            SetPlaneInteractable(true);
+
             _mainThreadWorkQueue.Enqueue(() =>
             {
                 // specifically enable plane for trainee
@@ -225,6 +238,8 @@ namespace HoloCook.HoloLens2
         {
             // var om = GetObjectManipulatorScript();
             // om.enabled = false;
+
+            SetPlaneInteractable(false);
 
             _mainThreadWorkQueue.Enqueue(() => { planeRef.SetActive(false); });
         }
