@@ -143,7 +143,7 @@ namespace HoloCook.Network
 
         private readonly string localIP = NetworkToolkit.GetWiFiIPv4();
         private string remoteIP = "192.168.0.221";
-        private int remotePort = 8888;
+        private int remotePort = 9999;
 
         // execute action from other end
         public System.Action<int> ExecuteSimulation;
