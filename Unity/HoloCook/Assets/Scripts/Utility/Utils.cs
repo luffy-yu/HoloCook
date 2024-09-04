@@ -123,7 +123,17 @@ namespace HoloCook.Utility
         // to make the collision more accurate, using the ThumbTip of both hands
         public static string GetThumbJointName(Handness handness)
         {
-            return $"{handness.ToString()} ThumbTip";
+            // return $"{handness.ToString()} ThumbTip";
+            
+            #region Meta Quest Pro
+        
+            // add a rigidbody and a sphere collider to r_thumb_finger_tip_marker under RightHandGrabUseSynthetic,
+            // check IsTrigger, set radius to 0.005, and do the same for the left counter part
+            
+            var prefix = handness == Handness.Left ? "l" : "r";
+            return $"{prefix}_thumb_finger_tip_marker";
+            
+            #endregion
         }
 
         private static GUIStyle labelStyle = null;
