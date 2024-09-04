@@ -3,13 +3,13 @@
 // // Licensed under the MIT License. See LICENSE file in the project root for full license information.
 // //
 //
-// #if !UNITY_WSA // not windows uwp
-// using UnityEngine;
-// public class ImageFromVideoStream : MonoBehaviour
-// {
-//     
-// }
-// #else
+#if !UNITY_WSA // not windows uwp
+using UnityEngine;
+public class ImageFromVideoStream : MonoBehaviour
+{
+    
+}
+#else
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -399,4 +399,4 @@ namespace HoloCook.Sync
         }
     }
 }
-// #endif
+#endif

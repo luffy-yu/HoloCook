@@ -1,10 +1,10 @@
-// #if !UNITY_WSA // not windows uwp
-// using UnityEngine;
-// public class CameraStreamHelper : MonoBehaviour
-// {
-//     
-// }
-// #else
+#if !UNITY_WSA // not windows uwp
+using UnityEngine;
+public class CameraStreamHelper : MonoBehaviour
+{
+    
+}
+#else
  
 // Copyright (c) 2017 Vulcan, Inc. All rights reserved.  
 // Licensed under the Apache 2.0 license. See LICENSE file in the project root for full license information.
@@ -131,4 +131,4 @@ namespace CamStream.Scripts
         }
     }
 }
-// #endif
+#endif

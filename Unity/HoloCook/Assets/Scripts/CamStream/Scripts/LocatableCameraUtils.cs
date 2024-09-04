@@ -1,4 +1,4 @@
-﻿#if !UNITY_ANDROID // not android
+﻿#if !UNITY_WSA // not android
 using UnityEngine;
 public static class LocatableCameraUtils
 {

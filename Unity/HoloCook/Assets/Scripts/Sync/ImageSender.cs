@@ -3,19 +3,19 @@
 // Licensed under the MIT License. See LICENSE file in the project root for full license information.
 //
 
-// #if !UNITY_WSA // not windows uwp
-// using System.Collections.Generic;
-// using UnityEngine;
-// public class ImageSender : MonoBehaviour
-// {
-//     public Dictionary<string, object> additionalNameValues;
-//
-//     public void TakePicture()
-//     {
-//         
-//     }
-// }
-// #else
+#if !UNITY_WSA // not windows uwp
+using System.Collections.Generic;
+using UnityEngine;
+public class ImageSender : MonoBehaviour
+{
+    public Dictionary<string, object> additionalNameValues;
+
+    public void TakePicture()
+    {
+        
+    }
+}
+#else
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -151,4 +151,4 @@ namespace HoloCook.Sync
         }
     }
 }
-// #endif
+#endif

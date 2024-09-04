@@ -838,6 +838,9 @@
     <Reference Include="Oculus.Interaction.Samples">
       <HintPath>D:\Projects\Code\public\HoloCook\Unity\HoloCook\Library\ScriptAssemblies\Oculus.Interaction.Samples.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
+      <HintPath>D:\Projects\Code\public\HoloCook\Unity\HoloCook\Library\ScriptAssemblies\Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Oculus.Interaction.InterfaceSupport">
       <HintPath>D:\Projects\Code\public\HoloCook\Unity\HoloCook\Library\ScriptAssemblies\Oculus.Interaction.InterfaceSupport.dll</HintPath>
     </Reference>
