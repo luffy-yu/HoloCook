@@ -1,31 +1,13 @@
 {
     "m_SelectedDeviceId": "230YC01D7P01R3",
     "m_SelectedProcess": {
-        "deviceId": "230YC01D7P01R3",
-        "name": "com.chuange.org.HoloCook",
-        "processId": 30129,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownProcessesForSerialization": [
-        {
-            "deviceId": "230YC01D7P01R3",
-            "name": "com.oculus.shellenv",
-            "processId": 2384,
-            "exited": false
-        },
-        {
-            "deviceId": "230YC01D7P01R3",
-            "name": "com.chuange.org.HoloCook",
-            "processId": 27169,
-            "exited": true
-        },
-        {
-            "deviceId": "230YC01D7P01R3",
-            "name": "com.chuange.org.HoloCook",
-            "processId": 27740,
-            "exited": true
-        },
         {
             "deviceId": "230YC01D7P01R3",
             "name": "com.chuange.org.HoloCook",
@@ -36,13 +18,19 @@
             "deviceId": "230YC01D7P01R3",
             "name": "com.chuange.org.HoloCook",
             "processId": 29467,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "230YC01D7P01R3",
             "name": "com.chuange.org.HoloCook",
             "processId": 30129,
-            "exited": false
+            "exited": true
+        },
+        {
+            "deviceId": "230YC01D7P01R3",
+            "name": "com.chuange.org.HoloCook",
+            "processId": 8093,
+            "exited": true
         }
     ],
     "m_Tags": {
