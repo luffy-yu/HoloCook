@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using Byter;
@@ -20,6 +21,7 @@ using UdpClient = Netly.UdpClient;
 using HoloCook.HoloLens2;
 using HoloCook.Utility;
 using HoloCook.Sync;
+using MiscUtil.Collections.Extensions;
 
 namespace HoloCook.Network
 {
@@ -47,12 +49,35 @@ namespace HoloCook.Network
     {
         public static string GetWiFiIPv4()
         {
+#if UNITY_ANDROID
+            return GetLocalIPv4();
+#endif
             return GetLocalIPv4(NetworkInterfaceType.Wireless80211);
         }
+
+        #region Meta Quest Fix
+        // refer: https://stackoverflow.com/questions/73060203/unity-2022-2-0b1-get-ip-of-device
+        public static string GetLocalIPv4()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+
+            return "";
+        }
+
+        #endregion
 
         // refer: https://stackoverflow.com/questions/6803073/get-local-ip-address
         // GetLocalIPv4(NetworkInterfaceType.Ethernet);
         // GetLocalIPv4(NetworkInterfaceType.Wireless80211);
+        // BUG: this works for HoloLens 2 but not for Meta Quest Pro
         public static string GetLocalIPv4(NetworkInterfaceType _type)
         {
             string output = "";
@@ -143,7 +168,7 @@ namespace HoloCook.Network
 
         private readonly string localIP = NetworkToolkit.GetWiFiIPv4();
         private string remoteIP = "192.168.0.221";
-        private int remotePort = 8888;
+        private int remotePort = 9999;
 
         // execute action from other end
         public System.Action<int> ExecuteSimulation;
@@ -151,7 +176,7 @@ namespace HoloCook.Network
         private void Start()
         {
             // ip config
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
             remoteIP = gameObject.GetComponent<NetlyTargetHost>().ipaddress;
 #else
             (remoteIP, remotePort) = Utils.LoadIPConfig();
@@ -172,7 +197,7 @@ namespace HoloCook.Network
 #endif
             }
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
             Debug.Log($"Local IP: {localIP}");
             Debug.Log($"Remote IP: {remoteIP}");
 #endif
@@ -181,21 +206,21 @@ namespace HoloCook.Network
             // UDP
             _udpClient.OnOpen(() =>
             {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError($"[ Netly Client ] UDPClient {_udpClientHost.Address.ToString()}:{_udpClientHost.Port}");
 #endif
             });
 
             _udpClient.OnError((e) =>
             {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError("UdpClient: OnError: " + e.Message);
 #endif
             });
 
             _udpClient.OnClose(() =>
             {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError("UdpClient: OnClose");
 #endif
             });
@@ -205,7 +230,7 @@ namespace HoloCook.Network
             _udpServer.OnOpen(() =>
             {
                 _udpServerHost = _udpServer.Host;
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError("UdpServer: OnOpen: " + _udpServerHost.ToString());
 #endif
 
@@ -213,14 +238,14 @@ namespace HoloCook.Network
                 wUdp.Write(_udpServerHost.Address.ToString());
                 wUdp.Write(_udpServerHost.Port);
                 tcp.ToEvent(NetlyEventTypes.ReplyUdpHost, wUdp.GetBytes());
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError($"[ Netly Client ] UDPServer {_udpServerHost.Address.ToString()}:{_udpServerHost.Port}");
 #endif
             });
 
             _udpServer.OnModify((socket) =>
             {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError("UdpServer: OnModify");
 #endif
             });
@@ -228,7 +253,7 @@ namespace HoloCook.Network
 
             _udpServer.OnEvent((server, name, data) =>
             {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError($"UdpClient: OnEvent {name}");
 #endif
 
@@ -271,7 +296,7 @@ namespace HoloCook.Network
             // TCP
             tcp.OnOpen(() =>
             {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError("TcpClient: OnOpen: " + tcp.Host.ToString());
 #endif
                 // send login
@@ -284,21 +309,21 @@ namespace HoloCook.Network
 
             tcp.OnError((e) =>
             {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError("TcpClient: OnError: " + e.Message);
 #endif
             });
 
             tcp.OnClose(() =>
             {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError("TcpClient: OnClose");
 #endif
             });
 
             tcp.OnEvent((name, data) =>
             {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError($"TcpClient: OnEvent {name}");
 #endif
                 if (name == NetlyEventTypes.ReplyUdpHost)
@@ -332,7 +357,7 @@ namespace HoloCook.Network
                 {
                     _mainThreadWorkQueue.Enqueue(() =>
                     {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                         Debug.LogWarning("TcpClient: SyncRegistration");
 #endif
                         using Reader r = new Reader(data);
@@ -360,7 +385,7 @@ namespace HoloCook.Network
                 {
                     _mainThreadWorkQueue.Enqueue(() =>
                     {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                         Debug.LogWarning("TcpClient: MsgHL2Header");
 #endif
                         using Reader r = new Reader(data);
@@ -374,7 +399,7 @@ namespace HoloCook.Network
                 {
                     _mainThreadWorkQueue.Enqueue(() =>
                     {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                         Debug.LogWarning("TcpClient: Data");
 #endif
                         using Reader r = new Reader(data);
@@ -532,7 +557,7 @@ namespace HoloCook.Network
             var so = objectsList.FindSynchronizableObjectByID(int.Parse(objid));
             if (so == null)
             {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
                 Debug.LogError($"Can not find object for ID {objid} of registration result.");
 #endif
             }
@@ -671,7 +696,7 @@ namespace HoloCook.Network
         {
             if (!tcp.IsOpened) return;
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID
             Debug.LogError("TcpClient: Request to Change Direction");
 #endif
             using Writer w = new Writer();
@@ -697,7 +722,7 @@ namespace HoloCook.Network
 
         #endregion
 
-// #if UNITY_EDITOR
+// #if UNITY_EDITOR || UNITY_ANDROID
 //         private void OnGUI()
 //         {
 //             GUILayout.BeginVertical();

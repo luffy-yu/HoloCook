@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "230YC01D7P01R3",
     "m_SelectedProcess": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "230YC01D7P01R3",
+        "name": "com.chuange.org.HoloCook",
+        "processId": 16080,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,26 +11,38 @@
         {
             "deviceId": "230YC01D7P01R3",
             "name": "com.chuange.org.HoloCook",
-            "processId": 28867,
-            "exited": true
-        },
-        {
-            "deviceId": "230YC01D7P01R3",
-            "name": "com.chuange.org.HoloCook",
-            "processId": 29467,
-            "exited": true
-        },
-        {
-            "deviceId": "230YC01D7P01R3",
-            "name": "com.chuange.org.HoloCook",
-            "processId": 30129,
-            "exited": true
-        },
-        {
-            "deviceId": "230YC01D7P01R3",
-            "name": "com.chuange.org.HoloCook",
             "processId": 8093,
             "exited": true
+        },
+        {
+            "deviceId": "230YC01D7P01R3",
+            "name": "com.chuange.org.HoloCook",
+            "processId": 9052,
+            "exited": true
+        },
+        {
+            "deviceId": "230YC01D7P01R3",
+            "name": "com.chuange.org.HoloCook",
+            "processId": 11909,
+            "exited": true
+        },
+        {
+            "deviceId": "230YC01D7P01R3",
+            "name": "com.oculus.shellenv",
+            "processId": 2371,
+            "exited": false
+        },
+        {
+            "deviceId": "230YC01D7P01R3",
+            "name": "com.chuange.org.HoloCook",
+            "processId": 12412,
+            "exited": true
+        },
+        {
+            "deviceId": "230YC01D7P01R3",
+            "name": "com.chuange.org.HoloCook",
+            "processId": 16080,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -114,5 +126,5 @@
             "exited": false
         }
     },
-    "m_AutoScroll": 0
+    "m_AutoScroll": 2
 }
