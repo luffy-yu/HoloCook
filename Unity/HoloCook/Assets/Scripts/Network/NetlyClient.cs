@@ -168,7 +168,7 @@ namespace HoloCook.Network
 
         private readonly string localIP = NetworkToolkit.GetWiFiIPv4();
         private string remoteIP = "192.168.0.221";
-        private int remotePort = 9999;
+        private int remotePort = 8888;
 
         // execute action from other end
         public System.Action<int> ExecuteSimulation;
@@ -176,7 +176,7 @@ namespace HoloCook.Network
         private void Start()
         {
             // ip config
-#if UNITY_EDITOR || UNITY_ANDROID
+#if UNITY_EDITOR
             remoteIP = gameObject.GetComponent<NetlyTargetHost>().ipaddress;
 #else
             (remoteIP, remotePort) = Utils.LoadIPConfig();

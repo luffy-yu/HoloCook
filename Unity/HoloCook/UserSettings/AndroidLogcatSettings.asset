@@ -3,17 +3,11 @@
     "m_SelectedProcess": {
         "deviceId": "230YC01D7P01R3",
         "name": "com.chuange.org.HoloCook",
-        "processId": 16080,
+        "processId": 24904,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownProcessesForSerialization": [
-        {
-            "deviceId": "230YC01D7P01R3",
-            "name": "com.chuange.org.HoloCook",
-            "processId": 8093,
-            "exited": true
-        },
         {
             "deviceId": "230YC01D7P01R3",
             "name": "com.chuange.org.HoloCook",
@@ -42,6 +36,12 @@
             "deviceId": "230YC01D7P01R3",
             "name": "com.chuange.org.HoloCook",
             "processId": 16080,
+            "exited": true
+        },
+        {
+            "deviceId": "230YC01D7P01R3",
+            "name": "com.chuange.org.HoloCook",
+            "processId": 24904,
             "exited": false
         }
     ],
