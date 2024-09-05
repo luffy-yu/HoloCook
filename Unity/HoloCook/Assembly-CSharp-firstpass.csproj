@@ -835,9 +835,6 @@
     <Reference Include="Meta.XR.ImmersiveDebugger">
       <HintPath>D:\Projects\Code\public\HoloCook\Unity\HoloCook\Library\ScriptAssemblies\Meta.XR.ImmersiveDebugger.dll</HintPath>
     </Reference>
-    <Reference Include="Oculus.Interaction.Samples">
-      <HintPath>D:\Projects\Code\public\HoloCook\Unity\HoloCook\Library\ScriptAssemblies\Oculus.Interaction.Samples.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
       <HintPath>D:\Projects\Code\public\HoloCook\Unity\HoloCook\Library\ScriptAssemblies\Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
     </Reference>
@@ -852,6 +849,9 @@
     </Reference>
     <Reference Include="Oculus.Interaction.OVR">
       <HintPath>D:\Projects\Code\public\HoloCook\Unity\HoloCook\Library\ScriptAssemblies\Oculus.Interaction.OVR.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.Interaction.Samples">
+      <HintPath>D:\Projects\Code\public\HoloCook\Unity\HoloCook\Library\ScriptAssemblies\Oculus.Interaction.Samples.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:\Projects\Code\public\HoloCook\Unity\HoloCook\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
