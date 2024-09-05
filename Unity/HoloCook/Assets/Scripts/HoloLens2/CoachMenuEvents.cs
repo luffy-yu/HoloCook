@@ -190,6 +190,19 @@ namespace HoloCook.HoloLens2
 
                         obj.transform.position = child.position;
                         obj.transform.rotation = child.rotation;
+
+                        #region Meta Quest Fix
+                        // For some reason, it will trigger the collision especially ONLY for the small cup.
+                        // Back up the transform, so it can be restored after collision with the plane.
+                        
+                        // for small cup
+                        if (obj.name.Equals(Menu.Static.GetName(Menu.Static.Stuff.SmallCup)))
+                        {
+                            // backup
+                            obj.GetComponent<SmallCupGrabbable>().BackupTransform();
+                        }
+                        #endregion
+                        
                         break;
                     }
                 }

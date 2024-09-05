@@ -58,7 +58,6 @@ namespace HoloCook.Menu
             // hand grab
             if (name.StartsWith(Utils.GetThumbJointName(handness)))
             {
-                print("collision");
                 if (CanGrab() && handPalmTracker.CanAttach(handness))
                 {
                     if (!backuped)

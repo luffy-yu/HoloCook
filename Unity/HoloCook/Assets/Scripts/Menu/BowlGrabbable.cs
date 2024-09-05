@@ -21,9 +21,16 @@ namespace HoloCook.Menu
         private Vector3 icePosition;
         private Quaternion iceRotation;
         private bool iceBackuped = false;
+
+        #region Meta Quest Adaption
         
-        // ice offset for better visualization, debug via NetlyEventTypes.Data
-        private Vector3 iceLocalPosition = new Vector3(-0.01f, -0.05f, 0.05f);
+        // // ice offset for better visualization, debug via NetlyEventTypes.Data
+        // private Vector3 iceLocalPosition = new Vector3(-0.01f, -0.05f, 0.05f);
+
+        // ice offset for better visualization, debug via UnityEditor (Nice)
+        private Vector3 iceLocalPosition = new Vector3(-0.1f, -0.08f, 0f);
+        
+        #endregion
 
         public override bool CanGrab()
         {
