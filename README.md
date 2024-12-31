@@ -4,8 +4,9 @@
 <a href="https://www.chuange.org/papers/HoloCook.html"><img src="docs/home.png" style="width: 50px"/></a>&emsp;
 <a href="https://youtu.be/VawN5NliBAk"><img src="docs/video.png" style="width: 50px"/></a>&emsp;
 <a href="https://youtu.be/IQjKy95F7l0"><img src="docs/video.png" style="width: 50px"/></a>&emsp;
-<a href="#"><img src="docs/internet.png" style="width: 50px"/></a>&emsp;
+<a href="https://doi.org/10.1007/978-3-031-76812-5_17"><img src="docs/internet.png" style="width: 50px"/></a>&emsp;
 <a href="https://www.chuange.org/files/HoloCook.pdf"><img src="docs/pdf.png" style="width: 50px"/></a>&emsp;
+<a href="https://docs.google.com/presentation/d/1N6lIAZ79BwTGOIycZx-roORzFZgtJqLsebD_Ieo_yuo/edit?usp=sharing"><img src="docs/ppt.png" style="width: 50px"/></a>&emsp;
 <a href="https://www.linkedin.com/in/liuchuan-yu-64a44621a"><img src="docs/linkedin.png" style="width: 50px"/></a>&emsp;
 <a href="mailto:lyu20@gmu.edu"><img src="docs/mail.png" style="width: 50px"/></a>&emsp;
 
@@ -179,11 +180,12 @@ such as:
 **If you find this work useful, please cite it using the following format.**
 
 ```
-@inproceedings{yu2024holocook,
+@inproceedings{yu2025holocook,
   title={HoloCook: A Real-Time Remote Mixed Reality Cooking Tutoring System},
   author={Yu, Liuchuan and Han, Bo and Chen, Songqing and Yu, Lap-Fai},
   booktitle={International Conference on Human-Computer Interaction},
-  year={2024},
+  pages={244--264},
+  year={2025},
   organization={Springer}
 }
 ```
